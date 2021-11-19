@@ -7,7 +7,7 @@
 // }
 const replay = document.querySelector('#replayGame');
 const startGame = document.querySelector('#startGame');
-const homePage = document.querySelector('#homePage');
+
 const cards = document.querySelectorAll('.card');
 //useer .createElement to create img variables here
 //use my flipCard function in a loop to iterate through all cards
@@ -32,7 +32,17 @@ function flipCard(img) {
   }
   img.src = cardBack;
 }
-setTimeout(flipCard, 2000);
+const homePage = document.querySelector('#homePage');
+// let gamePage = './script.js';
+// let welcomePage = './Users/rico/ga_seir/projects/memorygame/welcomePage';
+// homePage.addEventListener('click', () => {});
+// function landingPage(homePage) {
+//   if (gamePage.src === gamePage) {
+//     gamePage.src = welcomePage;
+//   }
+// }
+//research set timeout
+
 // setTimeout(flipCard() {
 //   flipCard(img)
 // }, 2000);
@@ -40,4 +50,18 @@ setTimeout(flipCard, 2000);
 //   setTimeout(flipCard, 3000);
 // }
 
-//research set timeout
+//win conditions
+// player chooses card and then another card, if cards are matching it is a point
+//and cards should stay flipped.
+
+// if cards are not matching, cards need to be flipped back over and player goes again.
+//18 cards total, 9 pairs of winning cards
+// let pairs = 0;
+// for (let i = 0; i < cards.length; i++) {
+//   if (card1 === card2) {
+//     pairs = 1;
+//     console.log(winner);
+//   }
+// }
+// let flippedCards = 0;
+// let cardBacks = 18;

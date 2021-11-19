@@ -1,7 +1,12 @@
 h1 {
   color: cornflowerblue;
 }
-
+#homePage {
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  color: white font-size 5px;
+}
 .fullboard {
   display: flex;
   /* flex-direction: row; */
