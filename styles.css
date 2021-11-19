@@ -1,3 +1,31 @@
 h1 {
   color: cornflowerblue;
 }
+
+.fullboard {
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  height: 30vh;
+  width: 40vw;
+}
+.card {
+  height: 100px;
+  width: 100px;
+  /* background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.customerparadigm.com%2Fwp-content%2Fuploads%2F2011%2F06%2Fflatirons-june23-2011-09271-150x150.jpg&f=1&nofb=1'); */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#card1 {
+  height: 100px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#card2 {
+  height: 100px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
