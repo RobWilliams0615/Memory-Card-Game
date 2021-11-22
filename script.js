@@ -86,12 +86,6 @@ function flipCard(card) {
     console.log(cardsSelected);
     winMatches();
   }
-  // if (img.src === cardBack) {
-  //   img.src = cardArray;
-  //   console.log('flipped');
-  //   return;
-  // }
-  // img.src = cardBack;
 }
 // check if cards match, if so they should remain with clicked img
 
@@ -104,12 +98,18 @@ function winMatches() {
       card2.style.opacity = '0';
       alert('Match');
     }, 500);
-  } else { 
+  } else {
+    if (card1.innerText !== card2.innerText) {
+      card1.style.backgroundColor = 'yellow';
+      card2.style.backgroundColor = 'yellow';
+      card1.disabled = false;
+      card2.disabled = false;
+    }
+    cardsSelected = [];
+    numOfClicks = 0;
+  }
   cardsSelected = [];
   numOfClicks = 0;
-  
 }
-// function resetGame() {
-//   document.getElementById('board').reset();
-// }
+
 // get flip card to work and dont worry about images display nothing, display something
