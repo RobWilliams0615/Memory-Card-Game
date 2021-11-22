@@ -37,25 +37,29 @@ let cardArray = [
   cardFrontSix,
   cardFrontSeven,
   cardFrontEight,
+  cardFrontNine,
+  cardFrontOne,
+  cardFrontTwo,
+  cardFrontThree,
+  cardFrontFour,
+  cardFrontFive,
+  cardFrontSix,
+  cardFrontSeven,
+  cardFrontEight,
   cardFrontNine
 ];
 
 //shuffle function for card array(fisher-yates), clicking start game should shuffle the cards
-function cardShuffle(cardArray) {
-  let startingIndex = cardArray.length,
-    random;
-  while (startingIndex !== 0) {
-    random = Math.floor(Math.random() * startingIndex);
-    startingIndex--;
-    [cardArray[startingIndex], cardArray[random]] = [
-      cardArray[random],
-      cardArray[startingIndex]
-    ];
+const cardShuffle = (cardArray) => {
+  for (let i = cardArray.length - 1; i > 0; i--) {
+    const a = Math.floor(Math.random() * (i + 1));
+    const b = cardArray[i];
+    cardArray[i] = cardArray[a];
+    cardArray[a] = b;
   }
-  return cardArray;
-}
+};
 
-let test = [1, 2, 3, 4];
+let test = cardArray;
 cardShuffle(test);
 console.log(test);
 
@@ -83,19 +87,19 @@ function flipCard(img) {
   img.src = cardBack;
 }
 //check if cards match, if so they should remain with clicked img
-let cardsSelected = [];
-function winMatches() {
-  let firstCard = cardArray[0];
-  let secondCard = cardArray[1];
-  if (cardArray[0] === cardArray[1]) {
-    flipCard(cards);
-  } else {
-    if (cardArray[0] !== cardArray[1]) {
-      img.src = cardBack;
-    }
-    return;
-  }
-}
-function resetGame() {
-  document.getElementById('board').reset();
-}
+// let cardsSelected = [];
+// function winMatches() {
+//   let firstCard = cardArray[0];
+//   let secondCard = cardArray[1];
+//   if (cardArray[0] === cardArray[1]) {
+//     flipCard(cards);
+//   } else {
+//     if (cardArray[0] !== cardArray[1]) {
+//       img.src = cardBack;
+//     }
+//     return;
+//   }
+// }
+// function resetGame() {
+//   document.getElementById('board').reset();
+// }
