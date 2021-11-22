@@ -1,6 +1,6 @@
 //Variables
 const replay = document.querySelector('#replayGame');
-const startGame = document.querySelector('#startGame');
+// const startGame = document.querySelector('#startGame');
 const homePage = document.querySelector('#homePage');
 const cards = document.querySelectorAll('.card');
 const cardBack =
@@ -40,7 +40,6 @@ let cardArray = [
   // 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F1296%2F9397%2Fproducts%2Faqua_45_compact.jpg%3Fv%3D1531945161&f=1&nofb=1',
   // 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.boundarywaterscatalog.com%2Fprodimages%2F1358-DEFAULT-s.jpg&f=1&nofb=1'
 ];
-
 //shuffle function for card array(fisher-yates), clicking start game should shuffle the cards
 const cardShuffle = (cardArray) => {
   for (let i = cardArray.length - 1; i > 0; i--) {
@@ -50,14 +49,8 @@ const cardShuffle = (cardArray) => {
     cardArray[a] = b;
   }
 };
-
-cardShuffle(cardArray);
-
-// startGame.addEventListener('click', () => cardShuffle(cards));
-// startGame.addEventListener('click', () => cardShuffle(test));
-// startGame.addEventListener('click', () => console.log(cardArray));
-
-// startGame.addEventListener('click', () => cardShuffle(startingIndex));
+// cardShuffle(cardArray);
+// document.getElementById('startGame').addEventListener('click', cardShuffle);
 
 for (let i = 0; i < cards.length; i++) {
   let back = document.createElement('img');
@@ -72,8 +65,10 @@ for (let i = 0; i < cards.length; i++) {
     ? cardArray[i]
     : cardArray[cardArray.length - 1 - i];
   cards[i].style.backgroundColor = 'yellow';
+  cards[i].style.color = 'yellow';
   cards[i].addEventListener('click', () => flipCard(cards[i]));
 }
+
 //function to change img of cards when clicked
 function flipCard(card) {
   card.style.backgroundColor = 'green';
@@ -87,15 +82,15 @@ function flipCard(card) {
     winMatches();
   }
 }
-// check if cards match, if so they should remain with clicked img
 
+// check if cards match, if so they should remain with clicked img, if not they go back to starting color
 function winMatches() {
   let card1 = cardsSelected[0];
   let card2 = cardsSelected[1];
   if (card1.innerText === card2.innerText) {
     setTimeout(() => {
-      card1.style.opacity = '0';
-      card2.style.opacity = '0';
+      // card1.style.opacity = '0';
+      // card2.style.opacity = '0';
       alert('Match');
     }, 500);
   } else {
