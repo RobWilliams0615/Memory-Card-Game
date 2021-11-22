@@ -1,21 +1,96 @@
-//this makes the display number change after the plus button is clicked
-// let number = 0;
-// function updateCounter() {
-//   const display = document.getElementById('counting');
-//   number = number + 1;
-//   display.innerText = number;
-// }
+//Variables
 const replay = document.querySelector('#replayGame');
 const startGame = document.querySelector('#startGame');
-
+const homePage = document.querySelector('#homePage');
 const cards = document.querySelectorAll('.card');
-//useer .createElement to create img variables here
+
 //use my flipCard function in a loop to iterate through all cards
 //This should change the cardFront from original image to the other image
 let cardFront =
   'http://images.folksy.com/aXRlbXMvMzczODc3LzIwMTQwNzA2LzE5NDg1MDk4OTAxNw-Q-Q-N/gallery/6446011-Hiking-Boots-0';
 let cardBack =
   'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.customerparadigm.com%2Fwp-content%2Fuploads%2F2011%2F06%2Fflatirons-june23-2011-09271-150x150.jpg&f=1&nofb=1';
+let cardFrontTwo =
+  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.for-sale.co.uk%2Fsh-img%2FGRAGRE_osprey%25252Batmos%25252B65_thumbnail.jpg&f=1&nofb=1';
+let cardFrontThree =
+  'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fphotos.gograph.com%2Fthumbs%2FCSP%2FCSP386%2Fk20899317.jpg&f=1&nofb=1';
+let cardFrontFour =
+  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-grid.fotosearch.com%2FCSP%2FCSP739%2Fcompas-clip-art__k7396786.jpg&f=1&nofb=1';
+let cardFrontFive =
+  'https://images-na.ssl-images-amazon.com/images/I/31hSfQHPrZL._AC_US160_.jpg';
+let cardFrontSix =
+  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages-na.ssl-images-amazon.com%2Fimages%2FI%2F61aq3sDldgL._AC_UL160_SR160%2C160_.jpg&f=1&nofb=1';
+let cardFrontSeven =
+  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi2.wp.com%2Fwww.ozark-trail-tents.com%2Fwp-content%2Fuploads%2F2009%2F07%2FOzarkTrailTents01.jpg&f=1&nofb=1';
+let cardFrontEight =
+  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F1296%2F9397%2Fproducts%2Faqua_45_compact.jpg%3Fv%3D1531945161&f=1&nofb=1';
+let cardFrontNine =
+  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.boundarywaterscatalog.com%2Fprodimages%2F1358-DEFAULT-s.jpg&f=1&nofb=1';
+
+//Array of card options, with front images and their links
+const cardArray = [
+  {
+    name: 'hikingBoots',
+    img: 'http://images.folksy.com/aXRlbXMvMzczODc3LzIwMTQwNzA2LzE5NDg1MDk4OTAxNw-Q-Q-N/gallery/6446011-Hiking-Boots-0'
+  },
+  {
+    name: 'hikingPack',
+    img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.for-sale.co.uk%2Fsh-img%2FGRAGRE_osprey%25252Batmos%25252B65_thumbnail.jpg&f=1&nofb=1'
+  },
+  {
+    name: 'hikingMap',
+    img: 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fphotos.gograph.com%2Fthumbs%2FCSP%2FCSP386%2Fk20899317.jpg&f=1&nofb=1'
+  },
+  {
+    name: 'hikingCompass',
+    img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-grid.fotosearch.com%2FCSP%2FCSP739%2Fcompas-clip-art__k7396786.jpg&f=1&nofb=1'
+  },
+  {
+    name: 'hikingPants',
+    img: 'https://images-na.ssl-images-amazon.com/images/I/31hSfQHPrZL._AC_US160_.jpg'
+  },
+  {
+    name: 'hikingShirt',
+    img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages-na.ssl-images-amazon.com%2Fimages%2FI%2F61aq3sDldgL._AC_UL160_SR160%2C160_.jpg&f=1&nofb=1'
+  },
+  {
+    name: 'hikingBottle',
+    img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F1296%2F9397%2Fproducts%2Faqua_45_compact.jpg%3Fv%3D1531945161&f=1&nofb=1'
+  },
+  {
+    name: 'hikingStove',
+    img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.boundarywaterscatalog.com%2Fprodimages%2F1358-DEFAULT-s.jpg&f=1&nofb=1'
+  },
+  {
+    name: 'hikingTent',
+    img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi2.wp.com%2Fwww.ozark-trail-tents.com%2Fwp-content%2Fuploads%2F2009%2F07%2FOzarkTrailTents01.jpg&f=1&nofb=1'
+  }
+];
+
+//shuffle function for card array(fisher-yates)
+function cardShuffle(cardArray) {
+  let startingIndex = cardArray.length,
+    random;
+  while (startingIndex !== 0) {
+    random = Math.floor(Math.random() * startingIndex);
+    startingIndex--;
+    [cardArray[startingIndex], cardArray[random]] = [
+      cardArray[random],
+      cardArray[startingIndex]
+    ];
+  }
+  return cardArray;
+}
+
+let test = [1, 2, 3, 4];
+cardShuffle(test);
+console.log(test);
+
+// startGame.addEventListener('click', () => cardShuffle(cards));
+startGame.addEventListener('click', () => cardShuffle(test));
+// startGame.addEventListener('click', () => console.log(cardArray));
+
+// startGame.addEventListener('click', () => cardShuffle(startingIndex));
 
 for (let i = 0; i < cards.length; i++) {
   console.log(cards[i]);
@@ -24,44 +99,29 @@ for (let i = 0; i < cards.length; i++) {
   cards[i].appendChild(img);
   cards[i].addEventListener('click', () => flipCard(img));
 }
-
+//function to change img of cards when clicked
 function flipCard(img) {
   if (img.src === cardBack) {
     img.src = cardFront;
+    console.log('flipped');
     return;
   }
   img.src = cardBack;
+  function delayCards() {
+    delay = setTimeout(cards);
+  }
 }
-const homePage = document.querySelector('#homePage');
-// let gamePage = './script.js';
-// let welcomePage = './Users/rico/ga_seir/projects/memorygame/welcomePage';
-// homePage.addEventListener('click', () => {});
-// function landingPage(homePage) {
-//   if (gamePage.src === gamePage) {
-//     gamePage.src = welcomePage;
-//   }
-// }
-//research set timeout
-
-// setTimeout(flipCard() {
-//   flipCard(img)
-// }, 2000);
-// function pauseCards() {
-//   setTimeout(flipCard, 3000);
-// }
-
-//win conditions
-// player chooses card and then another card, if cards are matching it is a point
-//and cards should stay flipped.
-
-// if cards are not matching, cards need to be flipped back over and player goes again.
-//18 cards total, 9 pairs of winning cards
-// let pairs = 0;
-// for (let i = 0; i < cards.length; i++) {
-//   if (card1 === card2) {
-//     pairs = 1;
-//     console.log(winner);
-//   }
-// }
-// let flippedCards = 0;
-// let cardBacks = 18;
+//check if cards match, if so they should remain with clicked img
+let cardsSelected = [];
+let cardName = [];
+function winMatches() {
+  let firstCard = cardArray[0];
+  let secondCard = cardArray[1];
+  if (cardArray[0] === cardArray[1]) {
+    flipCard(cards);
+  } else {
+    if (cardArray[0] !== cardArray[1]) {
+      img.src = cardBack;
+    }
+  }
+}
