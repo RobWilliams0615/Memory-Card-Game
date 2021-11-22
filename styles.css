@@ -1,14 +1,40 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Righteous', cursive;
+}
+body {
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.VbqNX_bzyT9M9B4oVfRK6AHaFj%26pid%3DApi&f=1');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 h1 {
-  color: cornflowerblue;
   text-align: center;
+  font-size: 60px;
+  font-weight: 900px;
+  color: fuchsia;
 }
 a {
   text-align: center;
   margin: 0 auto;
+  text-decoration: none;
+  border: 1px black solid;
+  border-radius: 25px;
+  font-size: 15px;
+  padding: 2px;
+  background-color: white;
+  color: fuchsia;
+  font-weight: 400;
+}
+#startGame {
+  border: 1px black solid;
+  border-radius: 25px;
+  font-size: 15px;
+  padding: 2px;
+  background-color: white;
+  color: fuchsia;
+  font-weight: 400;
+  width: 85px;
 }
 .fullBoard {
   display: grid;
@@ -23,4 +49,5 @@ a {
   height: 150px;
   width: 150px;
   padding: 5px;
+  margin-bottom: 2px;
 }
