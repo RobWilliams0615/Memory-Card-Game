@@ -40,7 +40,7 @@
 
 #### Memory Game Board
 
-![Memory Game]('/Users/rico/downloads/0cgjTpZ - Imgur.png')
+![Memory Game]('https://i.imgur.com/0cgjTpZ.png?1')
 
 ---
 
