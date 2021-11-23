@@ -4,7 +4,7 @@ const homePage = document.querySelector('#homePage');
 const cards = document.querySelectorAll('.card');
 let numOfClicks = 0;
 let cardsSelected = [];
-//Array of card options, with front images and their links
+//Array of card options
 let cardArray = [
   'boots',
   'boots',
@@ -36,7 +36,7 @@ const cardShuffle = (cardArray) => {
   }
 };
 cardShuffle(cardArray);
-//setting back of cards and inner text to yellow, event listener for cards to flip
+//setting back of cards and inner text to fuschia, event listener for cards to flip
 for (let i = 0; i < cards.length; i++) {
   cards[i].innerHTML = cardArray[i]
     ? cardArray[i]
@@ -60,7 +60,7 @@ function flipCard(card) {
   }
 }
 
-// check if cards match, if so they should remain green, if not they go back to yellow
+// check if cards match, if so they should remain black, if not they go back to fuchsia
 function winMatches() {
   let card1 = cardsSelected[0];
   let card2 = cardsSelected[1];
