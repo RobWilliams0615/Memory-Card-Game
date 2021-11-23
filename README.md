@@ -57,9 +57,9 @@
 
 ---
 
-#### CSS Tricks: [CSS-Tricks] (https://css-tricks.com/snippets/css/complete-guide-grid/)
+#### CSS Tricks: [CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid)
 
-#### GameTime Image: [DuckDuckGoSearch] (https://duckduckgo.com/)
+#### GameTime Image: [DuckDuckGoSearch](https://duckduckgo.com)
 
 #### Markdown Guide: [ia.net](https://ia.net/writer/support/general/markdown-guide)
 
