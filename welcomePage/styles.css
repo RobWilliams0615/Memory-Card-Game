@@ -44,7 +44,7 @@ p {
 }
 .gameImage {
   text-align: center;
-  background-image: url('/Users/rico/downloads/0cgjTpZ - Imgur.png');
+  background-image: url('./0cgjTpZ - Imgur.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 373px;
