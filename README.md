@@ -40,7 +40,7 @@
 
 #### Memory Game Board
 
-![Memory Game]('https://i.imgur.com/0cgjTpZ.png?1')
+![Memory Game](https://i.imgur.com/0cgjTpZ.png?1)
 
 ---
 
