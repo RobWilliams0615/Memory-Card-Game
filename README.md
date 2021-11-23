@@ -30,32 +30,34 @@
 
 #### Memory Card Game is played by selecting two cards from the 18 cards available and getting matches.
 
-#### The player will select the cards using their mouse and clicking the cards, they will then flip showing what the card image is that needs to be matched.
+#### The player will select the cards using their mouse and clicking the cards, they will then flip showing the word that needs to be matched.
 
-#### The object of the game is find all of the matches available from the 18 cards. You win if you get all of the cards to match, you lose if you are not able to within the time limit of 180 seconds.
+#### The object of the game is find all of the matches available from the 18 cards. You win if you get all of the cards to match, you lose if you do not. Hit replay game to try again.
 
 ---
 
 ### **_*What Game Will Look Like*_**
 
-#### Pong Board Example
+#### Memory Game Board
 
-![Memory Game](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0322%2F7017%2Fproducts%2FSLM-220-B_2048x.jpg%3Fv%3D1396120890&f=1&nofb=1)
+![Memory Game]('/Users/rico/downloads/0cgjTpZ - Imgur.png')
 
 ---
 
 ### **_*Future Updates*_**
 
-- [ ] Update Example Picture
-- [ ] introduce more cards
-- [ ] Introduce Sounds
-- [ ] reduce time limit
+- [ ] Replace words with images
+- [ ] Introduce more cards
+- [ ] Introduce Animation
+- [ ] Introduce time limit
 
 ---
 
 ### **Credits**
 
 ---
+
+#### CSS Tricks: [CSS-Tricks] (https://css-tricks.com/snippets/css/complete-guide-grid/)
 
 #### GameTime Image: [DuckDuckGoSearch] (https://duckduckgo.com/)
 

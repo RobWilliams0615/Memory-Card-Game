@@ -48,7 +48,7 @@ for (let i = 0; i < cards.length; i++) {
 
 //function to change color of cards when clicked
 function flipCard(card) {
-  card.style.backgroundColor = 'green';
+  card.style.backgroundColor = 'black';
   card.disabled = true;
   cardsSelected.push(card);
   numOfClicks++;
@@ -65,8 +65,8 @@ function winMatches() {
   let card1 = cardsSelected[0];
   let card2 = cardsSelected[1];
   if (card1.innerText === card2.innerText) {
-    card1.style.backgroundColor = 'green';
-    card2.style.backgroundColor = 'green';
+    card1.style.backgroundColor = 'black';
+    card2.style.backgroundColor = 'black';
   } else {
     if (card1.innerText !== card2.innerText) {
       card1.style.backgroundColor = 'fuchsia';
