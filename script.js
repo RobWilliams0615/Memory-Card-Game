@@ -41,8 +41,8 @@ for (let i = 0; i < cards.length; i++) {
   cards[i].innerHTML = cardArray[i]
     ? cardArray[i]
     : cardArray[cardArray.length - 1 - i];
-  cards[i].style.backgroundColor = 'yellow';
-  cards[i].style.color = 'yellow';
+  cards[i].style.backgroundColor = 'fuchsia';
+  cards[i].style.color = 'fuchsia';
   cards[i].addEventListener('click', () => flipCard(cards[i]));
 }
 
@@ -69,8 +69,8 @@ function winMatches() {
     card2.style.backgroundColor = 'green';
   } else {
     if (card1.innerText !== card2.innerText) {
-      card1.style.backgroundColor = 'yellow';
-      card2.style.backgroundColor = 'yellow';
+      card1.style.backgroundColor = 'fuchsia';
+      card2.style.backgroundColor = 'fuchsia';
       card1.disabled = false;
       card2.disabled = false;
     }
